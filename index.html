@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Gamer - Tienda de Videojuegos</title>
+    <!-- PASO 1: Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- PASO 1: Cabecera -->
     <header>
         <h1>Portal Gamer</h1>
         <p>Tu tienda especializada en videojuegos, consolas y accesorios.</p>
     </header>
 
-
-    <!-- PASO 2: Navegación -->
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -26,7 +25,6 @@
     </nav>
 
 
-    <!-- PASO 3: Contenido principal -->
     <main id="inicio">
 
         <section id="productos">
@@ -39,11 +37,10 @@
             </p>
 
 
-            <!-- PASO 4: Lista de productos -->
-            <ul>
+            <ul class="lista-productos">
 
                 <!-- Producto 1 -->
-                <li>
+                <li class="producto">
                     <h3>Minecraft</h3>
 
                     <img src="img/minecraft.jpg"
@@ -58,7 +55,7 @@
 
 
                 <!-- Producto 2 -->
-                <li>
+                <li class="producto">
                     <h3>EA Sports FC 26</h3>
 
                     <img src="img/fc26.jpg"
@@ -73,7 +70,7 @@
 
 
                 <!-- Producto 3 -->
-                <li>
+                <li class="producto">
                     <h3>Mario Kart 8 Deluxe</h3>
 
                     <img src="img/mariokart.jpg"
@@ -91,7 +88,7 @@
         </section>
 
     </main>
-    <!-- PASO 5: Pie de página -->
+
     <footer id="contacto">
 
         <h2>Contacto</h2>
@@ -107,7 +104,9 @@
 
         <p>
             Síguenos en nuestras redes sociales:
-            <a href="https://www.instagram.com/" target="_blank">
+            <a href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer">
                 Instagram
             </a>
         </p>

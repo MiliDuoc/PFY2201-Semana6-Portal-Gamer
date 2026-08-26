@@ -65,7 +65,7 @@ footer {
 }
 
 /* =========================================
-   PASO 3: COLORES Y TIPOGRAFÍAS
+   COLORES Y TIPOGRAFÍAS
    ========================================= */
 
 body {
@@ -99,6 +99,11 @@ nav {
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -148,13 +153,22 @@ footer a {
 }
 
 /* =========================================
-   PASO 4: SELECTORES AVANZADOS
+   SELECTORES AVANZADOS
    ========================================= */
 
 /* Selector de clase */
+
+/* =========================================
+   Paso 1: Agregar CSS Grid a los productos
+   ========================================= */
 .lista-productos {
     list-style: none;
     padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 /* Selector de clase */
@@ -217,11 +231,15 @@ footer a:hover {
     }
 
     .producto {
-        margin: 15px 0;
+        margin: 0;
     }
 
     header h1 {
         font-size: 2.2rem;
+    }
+
+    .lista-productos {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -246,12 +264,13 @@ footer a:hover {
     }
 
     nav ul {
-        padding: 0;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     nav li {
-        margin: 10px 0;
+        margin: 0;
     }
 
     nav a {
@@ -282,16 +301,11 @@ footer a:hover {
         padding: 15px;
     }
 
+    .lista-productos {
+        grid-template-columns: 1fr;
+    }
+
     footer {
         padding: 20px 15px;
     }
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
 }

@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
     <title>Portal Gamer - Tienda de Videojuegos</title>
-    <!-- PASO 1: Hoja de estilos externa -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -16,14 +18,121 @@
         <p>Tu tienda especializada en videojuegos, consolas y accesorios.</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <!-- Barra de navegación Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#inicio">Portal Gamer</a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarPortalGamer"
+                    aria-controls="navbarPortalGamer"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarPortalGamer">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
     </nav>
 
+    <!-- Carrusel de videojuegos -->
+    <section class="container my-4" aria-label="Videojuegos destacados">
+        <div id="carouselPortalGamer"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="3000">
+
+            <div class="carousel-indicators">
+                <button type="button"
+                        data-bs-target="#carouselPortalGamer"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Diapositiva 1">
+                </button>
+
+                <button type="button"
+                        data-bs-target="#carouselPortalGamer"
+                        data-bs-slide-to="1"
+                        aria-label="Diapositiva 2">
+                </button>
+
+                <button type="button"
+                        data-bs-target="#carouselPortalGamer"
+                        data-bs-slide-to="2"
+                        aria-label="Diapositiva 3">
+                </button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <!-- Diapositiva 1 -->
+                <div class="carousel-item active">
+                    <img src="img/minecraft.jpg"
+                        class="d-block w-100 imagen-carrusel"
+                        alt="Minecraft">
+                </div>
+
+                <!-- Diapositiva 2 -->
+                <div class="carousel-item">
+                    <img src="img/fc26.jpg"
+                        class="d-block w-100 imagen-carrusel"
+                        alt="EA Sports FC 26">
+                </div>
+
+                <!-- Diapositiva 3 -->
+                <div class="carousel-item">
+                    <img src="img/zelda.jpg"
+                        class="d-block w-100 imagen-carrusel"
+                        alt="The Legend of Zelda Tears of the Kingdom">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselPortalGamer"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"
+                    aria-hidden="true"></span>
+
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselPortalGamer"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+    </section>
 
     <main id="inicio">
 
@@ -37,123 +146,189 @@
             </p>
 
 
-            <ul class="lista-productos">
+            <div class="row g-4">
 
                 <!-- Producto 1 -->
-                <li class="producto">
-                    <h3>Minecraft</h3>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
 
-                    <img src="img/minecraft.jpg"
-                         alt="Portada del videojuego Minecraft"
-                         class="imagen-producto">
+                        <img src="img/minecraft.jpg"
+                            class="card-img-top imagen-producto"
+                            alt="Portada del videojuego Minecraft">
 
-                    <p>
-                        Explora, construye y crea tus propias aventuras
-                        en un mundo lleno de posibilidades.
-                    </p>
+                        <div class="card-body d-flex flex-column">
 
-                    <p class="precio">$29.990</p>
-                    <button class="btn-carro" type="button">
-                        Agregar al carro
-                    </button>
-                </li>
+                            <h3 class="card-title h5">Minecraft</h3>
 
+                            <p class="card-text">
+                                Explora, construye y crea tus propias aventuras
+                                en un mundo lleno de posibilidades.
+                            </p>
+
+                            <p class="precio">$29.990</p>
+
+                            <button class="btn btn-primary mt-auto"
+                                    type="button">
+                                Agregar al carro
+                            </button>
+
+                        </div>
+
+                    </article>
+                </div>
 
                 <!-- Producto 2 -->
-                <li class="producto">
-                    <h3>EA Sports FC 26</h3>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
 
-                    <img src="img/fc26.jpg"
-                         alt="Portada del videojuego EA Sports FC 26"
-                         class="imagen-producto">
+                        <img src="img/fc26.jpg"
+                            class="card-img-top imagen-producto"
+                            alt="Portada del videojuego EA Sports FC 26">
 
-                    <p>
-                        Disfruta de partidos de fútbol y compite
-                        con tus equipos favoritos.
-                    </p>
+                        <div class="card-body d-flex flex-column">
 
-                    <p class="precio">$59.990</p>
-                    <button class="btn-carro" type="button">
-                        Agregar al carro
-                    </button>
-                </li>
+                            <h3 class="card-title h5">EA Sports FC 26</h3>
+
+                            <p class="card-text">
+                                Disfruta de partidos de fútbol y compite
+                                con tus equipos favoritos.
+                            </p>
+
+                            <p class="precio">$59.990</p>
+
+                            <button class="btn btn-primary mt-auto"
+                                    type="button">
+                                Agregar al carro
+                            </button>
+
+                        </div>
+
+                    </article>
+                </div>
 
 
                 <!-- Producto 3 -->
-                <li class="producto">
-                    <h3>Mario Kart 8 Deluxe</h3>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
 
-                    <img src="img/mariokart.jpg"
-                         alt="Portada del videojuego Mario Kart 8 Deluxe"
-                         class="imagen-producto">
+                        <img src="img/mariokart.jpg"
+                            class="card-img-top imagen-producto"
+                            alt="Portada del videojuego Mario Kart 8 Deluxe">
 
-                    <p>
-                        Compite en entretenidas carreras utilizando
-                        personajes clásicos del universo de Mario.
-                    </p>
+                        <div class="card-body d-flex flex-column">
 
-                    <p class="precio">$49.990</p>
-                    <button class="btn-carro" type="button">
-                        Agregar al carro
-                    </button>
-                </li>
+                            <h3 class="card-title h5">Mario Kart 8 Deluxe</h3>
+
+                            <p class="card-text">
+                                Compite en entretenidas carreras utilizando
+                                personajes clásicos del universo de Mario.
+                            </p>
+
+                            <p class="precio">$49.990</p>
+
+                            <button class="btn btn-primary mt-auto"
+                                    type="button">
+                                Agregar al carro
+                            </button>
+
+                        </div>
+
+                    </article>
+                </div>
 
                 <!-- Producto 4 -->
-                <li class="producto">
-                    <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
 
-                    <img src="img/zelda.jpg"
-                        alt="Portada del videojuego The Legend of Zelda Tears of the Kingdom"
-                        class="imagen-producto">
-                    <p>
-                        Explora Hyrule y descubre nuevas aventuras,
-                       desafíos y misterios en un enorme mundo abierto.
-                    </p>
+                        <img src="img/zelda.jpg"
+                            class="card-img-top imagen-producto"
+                            alt="Portada del videojuego The Legend of Zelda Tears of the Kingdom">
 
-                    <p class="precio">$54.990</p>
-                    <button class="btn-carro" type="button">
-                        Agregar al carro
-                    </button>
-                </li>
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5">
+                                The Legend of Zelda: Tears of the Kingdom
+                            </h3>
+
+                            <p class="card-text">
+                                Explora Hyrule y descubre nuevas aventuras,
+                                desafíos y misterios en un enorme mundo abierto.
+                            </p>
+
+                            <p class="precio">$54.990</p>
+
+                            <button class="btn btn-primary mt-auto"
+                                    type="button">
+                                Agregar al carro
+                            </button>
+
+                        </div>
+
+                    </article>
+                </div>
 
                 <!-- Producto 5 -->
-                <li class="producto">
-                    <h3>Marvel's Spider-Man 2</h3>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
 
-                    <img src="img/spiderman2.jpg"
-                        alt="Portada del videojuego Marvel's Spider-Man 2"
-                        class="imagen-producto">
+                        <img src="img/spiderman2.jpg"
+                            class="card-img-top imagen-producto"
+                            alt="Portada del videojuego Marvel's Spider-Man 2">
 
-                    <p>
-                        Recorre Nueva York junto a Peter Parker y Miles Morales
-                        enfrentando nuevas amenazas y poderosos enemigos.
-                    </p>
+                        <div class="card-body d-flex flex-column">
 
-                    <p class="precio">$64.990</p>
-                    <button class="btn-carro" type="button">
-                        Agregar al carro
-                    </button>
-                </li>
+                            <h3 class="card-title h5">
+                                Marvel's Spider-Man 2
+                            </h3>
+
+                            <p class="card-text">
+                                Recorre Nueva York junto a Peter Parker y Miles Morales
+                                enfrentando nuevas amenazas y poderosos enemigos.
+                            </p>
+
+                            <p class="precio">$64.990</p>
+
+                            <button class="btn btn-primary mt-auto"
+                                    type="button">
+                                Agregar al carro
+                            </button>
+
+                        </div>
+
+                    </article>
+                </div>
 
                 <!-- Producto 6 -->
-                <li class="producto">
-                    <h3>God of War Ragnarök</h3>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
 
-                    <img src="img/godofwar.jpg"
-                        alt="Portada del videojuego God of War Ragnarök"
-                        class="imagen-producto">
+                        <img src="img/godofwar.jpg"
+                            class="card-img-top imagen-producto"
+                            alt="Portada del videojuego God of War Ragnarök">
 
-                    <p>
-                        Acompaña a Kratos y Atreus en una aventura épica
-                        inspirada en la mitología nórdica.
-                    </p>
+                        <div class="card-body d-flex flex-column">
 
-                    <p class="precio">$69.990</p>
-                    <button class="btn-carro" type="button">
-                        Agregar al carro
-                    </button>
-                </li>
-            </ul>
+                            <h3 class="card-title h5">
+                                God of War Ragnarök
+                            </h3>
+
+                            <p class="card-text">
+                                Acompaña a Kratos y Atreus en una aventura épica
+                                inspirada en la mitología nórdica.
+                            </p>
+
+                            <p class="precio">$69.990</p>
+
+                            <button class="btn btn-primary mt-auto"
+                                    type="button">
+                                Agregar al carro
+                            </button>
+
+                        </div>
+
+                    </article>
+                </div>
+            </div>
 
         </section>
 
@@ -188,6 +363,8 @@
         <p>&copy; 2026 Portal Gamer. Todos los derechos reservados.</p>
 
     </footer>
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

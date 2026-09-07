@@ -1,53 +1,47 @@
-# Portal Gamer - Sumativa Semana 3
+# Portal Gamer - Formativa Semana 4
 
-Proyecto desarrollado para la asignatura Desarrollo Frontend I.
+Proyecto desarrollado para la asignatura Desarrollo Frontend I (PFY2201).
 
-El objetivo de esta actividad es optimizar el diseño responsivo del sitio web Portal Gamer mediante CSS, utilizando Flexbox, CSS Grid y media queries.
+## Objetivo
+
+Implementar Bootstrap 5 para desarrollar una interfaz web responsiva,
+utilizando Navbar, Carousel, Grid System y Cards.
 
 ## Tecnologías utilizadas
 
 - HTML5
 - CSS3
-- Flexbox
-- CSS Grid
-- Media Queries
+- Bootstrap 5.3.3
+- Bootstrap Grid
+- Bootstrap Navbar
+- Bootstrap Carousel
+- Bootstrap Cards
 - Git y GitHub
 - GitHub Pages
 
 ## Diseño responsivo
 
-El sitio fue probado en diferentes resoluciones para comprobar su correcta adaptación.
+El sitio fue probado en diferentes tamaños de pantalla:
 
-### Escritorio - 1366 px
+- Escritorio
+- Tablet
+- Dispositivo móvil
 
-![Vista escritorio](capturas/escritorio-1366.png)
+La sección de productos utiliza:
 
-### Tablet - 768 px
+- `col-12` en dispositivos móviles
+- `col-md-6` en tablets
+- `col-lg-4` en escritorio
 
-![Vista tablet](capturas/tablet-768.png)
+## Componentes Bootstrap implementados
 
-### Móvil - 375 px
-
-![Vista móvil](capturas/movil-375.png)
-
-## Compatibilidad entre navegadores
-
-El sitio fue probado en distintos navegadores para verificar que mantenga su estructura, estilos y funcionalidad.
-
-### Google Chrome
-
-![Prueba Chrome](capturas/chrome.png)
-
-### Microsoft Edge
-
-![Prueba Edge](capturas/edge.png)
-
-### Mozilla Firefox
-
-![Prueba Firefox](capturas/firefox.png)
+- Navbar responsiva
+- Carrusel automático cada 3 segundos
+- Sistema de cuadrículas
+- Cards de productos
 
 ## Sitio publicado
 
 GitHub Pages:
 
-https://miliduoc.github.io/PFY2201-Semana3-Portal-Gamer/
+https://miliduoc.github.io/PFY2201-Semana4-Portal-Gamer/

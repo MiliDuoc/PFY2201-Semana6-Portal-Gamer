@@ -21,13 +21,20 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
 
-/* Cabecera */
+/* Cabecera principal */
 header {
     margin: 0;
     padding: 1.875rem;
     border-bottom: 0.25rem solid var(--color-acento);
+    background-color: var(--color-principal);
+    color: #ffffff;
+    text-align: center;
 }
 
 /* Menú de navegación */
@@ -43,6 +50,7 @@ main {
     max-width: 75rem;
     margin: 1.875rem auto;
     padding: 1.25rem;
+    background-color: #ffffff;
 }
 
 /* Sección de productos */
@@ -62,30 +70,10 @@ main {
     background-color: #ffffff;
 }
 
-/* Pie de página */
-footer {
-    margin-top: 1.875rem;
-    padding: 1.875rem;
-    border-top: 0.25rem solid var(--color-acento);
-}
 
 /* =========================================
    COLORES Y TIPOGRAFÍAS
    ========================================= */
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
-}
-
-/* Cabecera */
-header {
-    background-color: var(--color-principal);
-    color: #ffffff;
-    text-align: center;
-}
 
 header h1 {
     font-size: 2.5rem;
@@ -95,12 +83,6 @@ header h1 {
 header p {
     font-size: 1.1rem;
     color: #d8d8e8;
-}
-
-
-/* Contenido principal */
-main {
-    background-color: #ffffff;
 }
 
 /* Título de productos */
@@ -133,6 +115,9 @@ main {
 
 /* Pie de página */
 footer {
+    margin-top: 1.875rem;
+    padding: 1.875rem;
+    border-top: 0.25rem solid var(--color-acento);
     background-color: var(--color-principal);
     color: #ffffff;
     text-align: center;
@@ -203,9 +188,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
-    /* =========================================
-    CARRUSEL BOOTSTRAP
-    ========================================= */
+/* =========================================
+   CARRUSEL BOOTSTRAP
+   ========================================= */
 
 .imagen-carrusel {
     width: 100%;

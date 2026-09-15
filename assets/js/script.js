@@ -21,6 +21,12 @@ function cargarProductos() {
             return respuesta.json();
         })
         .then(function (productos) {
+
+            // Valida que los datos recibidos tengan el formato esperado.
+            if (!Array.isArray(productos)) {
+                throw new Error("El formato de los productos no es válido.");
+            }
+
             productosDisponibles = productos;
             mostrarProductos(productos);
         })

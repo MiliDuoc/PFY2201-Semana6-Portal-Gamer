@@ -383,3 +383,65 @@ function configurarBusqueda() {
 
 // Activa el evento submit del formulario de búsqueda.
 configurarBusqueda();
+
+// =========================================
+// EVENTO CLICK - CATEGORÍAS DE PRODUCTOS
+// =========================================
+
+/**
+ * Configura los enlaces de categorías de la barra de navegación
+ * para filtrar los productos cargados desde productos.json.
+ */
+function configurarCategorias() {
+    const enlacesCategorias = document.querySelectorAll(".categoria-link");
+    const mensaje = document.getElementById("mensaje-productos");
+    const campoBusqueda = document.getElementById("buscar-producto");
+
+    enlacesCategorias.forEach(function (enlace) {
+        enlace.addEventListener("click", function () {
+
+            // Obtiene la categoría almacenada en el atributo data-categoria.
+            const categoriaSeleccionada = enlace.dataset.categoria;
+
+            // Filtra los productos que pertenecen a la categoría seleccionada.
+            const productosFiltrados = productosDisponibles.filter(function (producto) {
+                return producto.categoria === categoriaSeleccionada;
+            });
+
+            // Limpia una búsqueda anterior y muestra los productos de la categoría.
+            campoBusqueda.value = "";
+            mensaje.textContent = "";
+            mensaje.className = "mt-3";
+
+            mostrarProductos(productosFiltrados);
+        });
+    });
+}
+
+// Activa el filtrado mediante las categorías de la barra de navegación.
+configurarCategorias();
+
+// =========================================
+// EVENTO CLICK - MOSTRAR TODOS LOS PRODUCTOS
+// =========================================
+
+/**
+ * Permite volver a mostrar el catálogo completo
+ * al seleccionar "Productos" en la barra de navegación.
+ */
+function configurarVerTodosProductos() {
+    const enlaceProductos = document.getElementById("ver-todos-productos");
+    const campoBusqueda = document.getElementById("buscar-producto");
+    const mensaje = document.getElementById("mensaje-productos");
+
+    enlaceProductos.addEventListener("click", function () {
+        campoBusqueda.value = "";
+        mensaje.textContent = "";
+        mensaje.className = "mt-3";
+
+        mostrarProductos(productosDisponibles);
+    });
+}
+
+// Activa el enlace para recuperar el catálogo completo.
+configurarVerTodosProductos();

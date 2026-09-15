@@ -128,8 +128,8 @@ data/
 
 Repositorio GitHub:
 
-Pendiente de publicación de Semana 6.
+https://github.com/MiliDuoc/PFY2201-Semana6-Portal-Gamer
 
 GitHub Pages:
 
-Pendiente de publicación de Semana 6.
+https://miliduoc.github.io/PFY2201-Semana6-Portal-Gamer/

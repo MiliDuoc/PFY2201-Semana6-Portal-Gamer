@@ -1,10 +1,10 @@
-# Portal Gamer - Formativa Semana 5
+# Portal Gamer - Sumativa Semana 6
 
 Proyecto desarrollado para la asignatura Desarrollo Frontend I (PFY2201).
 
 ## Objetivo
 
-Incorporar JavaScript al sitio Portal Gamer para mejorar su interactividad mediante la manipulación del DOM, gestión de eventos y carga dinámica de datos utilizando Fetch API.
+Optimizar la lógica y funcionalidad del sitio web Portal Gamer mediante Bootstrap 5 y JavaScript, incorporando carga dinámica de productos, manipulación del DOM, eventos de usuario, búsqueda, carrito de compras y manejo de errores con Fetch API.
 
 ## Tecnologías utilizadas
 
@@ -20,9 +20,49 @@ Incorporar JavaScript al sitio Portal Gamer para mejorar su interactividad media
 
 ## Funcionalidades implementadas
 
+### Catálogo dinámico de productos
+
+Los productos se cargan desde el archivo local `productos.json` utilizando Fetch API.
+
+JavaScript genera dinámicamente las tarjetas de cada videojuego, incluyendo:
+
+- Imagen
+- Nombre
+- Descripción
+- Precio
+- Botón para agregar al carro
+
+### Barra de navegación
+
+La barra de navegación fue desarrollada con Bootstrap 5 y se adapta a dispositivos móviles.
+
+Incluye las categorías:
+
+- Acción
+- Aventura
+
+Al seleccionar una categoría, JavaScript filtra dinámicamente los productos correspondientes.
+
+### Buscador de productos
+
+Se implementó un formulario de búsqueda utilizando el evento `submit`.
+
+Permite buscar videojuegos por nombre o categoría y muestra un mensaje cuando no existen resultados.
+
+### Carro de compras
+
+Mediante el evento `click`, el usuario puede agregar videojuegos al carro.
+
+El resumen del carro se actualiza dinámicamente mostrando:
+
+- Productos agregados
+- Cantidad de productos
+- Precio de cada producto
+- Total de la compra
+
 ### Manipulación del DOM
 
-Se utiliza JavaScript para seleccionar, crear y modificar elementos dinámicamente mediante métodos como:
+JavaScript crea y actualiza elementos dinámicamente mediante métodos como:
 
 - `getElementById()`
 - `querySelectorAll()`
@@ -31,55 +71,65 @@ Se utiliza JavaScript para seleccionar, crear y modificar elementos dinámicamen
 - `textContent`
 - `classList`
 
-### Eventos JavaScript
+### Fetch API y manejo de errores
 
-Se implementaron diferentes eventos para mejorar la interacción del usuario:
+Fetch API obtiene los productos desde `productos.json`.
 
-- `click`: permite agregar productos al carro y actualizar su contador.
-- `mouseover`: modifica visualmente las tarjetas al pasar el cursor sobre ellas.
-- `mouseout`: devuelve las tarjetas a su estado visual original.
-- `submit`: procesa el formulario de suscripción sin recargar la página.
+Se implementaron validaciones para comprobar la respuesta y el formato de los datos recibidos.
 
-### Fetch API
+En caso de error, el sitio muestra un mensaje amigable al usuario.
 
-La sección "Novedades Gamer" utiliza Fetch API para obtener información desde el archivo `data/novedades.json`.
-
-Los datos obtenidos son procesados y mostrados dinámicamente en el sitio mediante JavaScript.
-
-También se implementó manejo de errores mediante `.catch()`.
+Además, la sección Novedades Gamer carga contenido dinámicamente desde `data/novedades.json`.
 
 ## Diseño responsivo
 
-El sitio mantiene el diseño responsivo desarrollado con Bootstrap y adapta sus contenidos a diferentes tamaños de pantalla.
+El sitio utiliza Bootstrap 5 y CSS para adaptarse a distintos tamaños de pantalla.
 
-La sección de productos utiliza:
+La cuadrícula de productos utiliza:
 
 - `col-12` en dispositivos móviles
 - `col-md-6` en tablets
 - `col-lg-4` en escritorio
 
+La barra de navegación utiliza el componente Navbar de Bootstrap y se transforma en un menú desplegable en pantallas pequeñas.
+
 ## Pruebas realizadas
 
-El funcionamiento del sitio fue probado en:
+Se verificó el funcionamiento de:
 
-- Google Chrome
-- Microsoft Edge
-- Mozilla Firefox
+- Carga dinámica de productos mediante Fetch API
+- Filtrado por categorías
+- Búsqueda de videojuegos
+- Evento `click` del carro
+- Actualización dinámica del resumen del carro
+- Evento `submit`
+- Manejo de búsquedas sin resultados
+- Manejo de errores de carga
+- Navegación responsiva
+- Carrusel automático
+- Sección Novedades Gamer
 
-Se verificó el funcionamiento del carrusel, carro de compras, eventos del mouse, formulario de suscripción y carga dinámica de novedades.
+## Estructura principal
 
-## Evidencias
-
-La carpeta `capturas` contiene evidencias del funcionamiento de:
-
-- Pruebas en Chrome, Edge y Firefox
-- Evento `click` y contador del carro
-- Evento `mouseover`
-- Carga de novedades mediante Fetch API
-- Evento `submit` del formulario
+```text
+index.html
+productos.json
+assets/
+├── css/
+│   └── styles.css
+├── img/
+└── js/
+    └── script.js
+data/
+└── novedades.json
+```
 
 ## Sitio publicado
 
+Repositorio GitHub:
+
+Pendiente de publicación de Semana 6.
+
 GitHub Pages:
 
-Pendiente de publicación de Semana 5.
+Pendiente de publicación de Semana 6.

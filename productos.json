@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre": "Minecraft",
+        "precio": 29990,
+        "imagen": "assets/img/minecraft.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Explora, construye y crea tus propias aventuras en un mundo lleno de posibilidades."
+    },
+    {
+        "id": 2,
+        "nombre": "EA Sports FC 26",
+        "precio": 59990,
+        "imagen": "assets/img/fc26.jpg",
+        "categoria": "Deportes",
+        "descripcion": "Disfruta de partidos de fútbol y compite con tus equipos favoritos."
+    },
+    {
+        "id": 3,
+        "nombre": "Mario Kart 8 Deluxe",
+        "precio": 49990,
+        "imagen": "assets/img/mariokart.jpg",
+        "categoria": "Carreras",
+        "descripcion": "Compite en entretenidas carreras utilizando personajes clásicos del universo de Mario."
+    },
+    {
+        "id": 4,
+        "nombre": "The Legend of Zelda: Tears of the Kingdom",
+        "precio": 54990,
+        "imagen": "assets/img/zelda.jpg",
+        "categoria": "Aventura",
+        "descripcion": "Explora Hyrule y descubre nuevas aventuras, desafíos y misterios en un enorme mundo abierto."
+    },
+    {
+        "id": 5,
+        "nombre": "Marvel's Spider-Man 2",
+        "precio": 64990,
+        "imagen": "assets/img/spiderman2.jpg",
+        "categoria": "Acción",
+        "descripcion": "Recorre Nueva York junto a Peter Parker y Miles Morales enfrentando nuevas amenazas y poderosos enemigos."
+    },
+    {
+        "id": 6,
+        "nombre": "God of War Ragnarök",
+        "precio": 69990,
+        "imagen": "assets/img/godofwar.jpg",
+        "categoria": "Acción",
+        "descripcion": "Acompaña a Kratos y Atreus en una aventura épica inspirada en la mitología nórdica."
+    }
+]
